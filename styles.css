@@ -1,0 +1,178 @@
+body {
+  background-color: #1e4745;
+  /* background-image: url("imagenes/estilo-musical.png");*/
+}
+
+h1 {
+}
+.topheader {
+  position: fixed;
+  background-color: #20817b;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+.menu-horizontal {
+  text-decoration: none;
+  list-style: none;
+  display: flex;
+  right: 100;
+  top: 0;
+  /*justify-content: center;*/
+  width: 100%;
+}
+.menu-horizontal li a {
+  text-decoration: none;
+  color: #ffff;
+  list-style: none;
+  display: block;
+  padding: 15px 20px;
+}
+.menu-horizontal li a:hover {
+  color: #ffff;
+  font-size: 20px;
+}
+.menu-vertical {
+  padding: 0;
+  position: absolute;
+  display: none;
+  list-style: none;
+  width: 15px;
+  background-color: #203531;
+}
+.munu-horizontal li:hover .menu-vertical {
+  display: block;
+}
+.logo img {
+  height: 50px;
+  width: auto;
+}
+.logo img:hover {
+  height: 60px;
+  width: auto;
+}
+/*section{
+margin: 100px auto;
+border-radius: 10;
+}*/
+/*Seccion Quienes somos*/
+.seccion-Quienes_somos {
+  padding: 60px 20px;
+  background-color: #279E96;
+}
+.Quienes_somos_general {
+  display: flex;
+  justify-content: space-arowt;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+}
+.Quienes_somos_texto {
+  flex: 1;
+}
+.Quienes_somos_texto p {
+  text align: justity;
+  color: #ffff;
+  font-size: 18px;
+}
+.seccion-Quienes_somos h1 {
+  color: #ffff;
+  line-height: 1;
+  text-align: center;
+  padding: 15px;
+}
+.Quienes_somos_img {
+  width: 1200px;
+  max-width: 500px;
+}
+
+/*Seccion Informacion*/
+.Informacion{
+  padding: 60px 20px;
+  background-color: #279E96;
+}
+.informacion_general {
+  display: flex;
+  justify-content: space-arowt;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+}
+.informacion_texto {  
+  flex: 1;
+}
+.informacion_texto p {
+  text align: justity;
+  color: #ffff;
+  font-size: 18px;
+}
+.Informacion h1 {
+  color: #ffff;
+  line-height: 1;
+  text-align: center;
+  padding: 15px;
+}
+.infotmacion_video iframe{
+  width: 1200px;
+  max-width: 500px;
+}
+/*Seccion-Formulario*/
+.seccion-formulario{
+  background-color: #20817b;
+  padding: 40px;
+  border:3px;
+  display: flex;
+justify-content: center;
+margin-bottom: 40px;
+}
+.div-cont-formulario{
+background-color: beige;
+padding: 40px;
+border: 2px solid blue;
+border-radius: 10px;
+width: 100%;
+max-width: 500px;
+}
+.campo {
+  background-color: aliceblue;
+  padding: 15px;
+  border: 1px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+.formulario label{
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: black;
+}
+/*inputs/Label*/
+.formulario input[type="text"],
+.formulario select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid red;
+  box-sizing: border-box;
+}
+.lista_checkbox,
+.lista_radio{
+  list-style: none;
+  margin: 0;
+  border: 1px;
+  background-color: aqua;
+  border-radius: 5px;
+}
+.formulario button{
+  background-color: black;
+  color: white;
+  border: 1.5px solid black;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  justify-content: center;
+}

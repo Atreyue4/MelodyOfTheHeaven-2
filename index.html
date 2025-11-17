@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>HTML + CSS</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="pie.css" />
+  </head>
+  <body>
+    <nav class="topheader">
+      <a href="" class="logo">
+        <img src="imagenes/logo.png" alt="" />
+      </a>
+      <ul class="menu-horizontal">
+        <li><a href="">Quienes somos</a></li>
+        <li><a href="">Informacion</a></li>
+        <ul class="menu-vertical">
+          <li><a href="">Funcionamiento</a></li>
+          <li><a href="">Seguridad</a></li>
+        </ul>
+        <li><a href="">Registrar</a></li>
+        <li><a href="">Iniciar Sesion</a></li>
+        <li><a href="">Contactanos</a></li>
+      </ul>
+    </nav>
+    <!--Seccion-¿Quienes somos?--->
+    <section class="seccion-Quienes_somos">
+      <h1>¿Quienes somos?</h1>
+      <div class="Quienes_somos_general">
+        <div class="Quienes_somos_texto">
+          <p>
+            En Melody of the Heaven creemos que la música es más que un sonido:
+            es un lenguaje universal capaz de sanar, unir y acompañar a las
+            personas en cada etapa de su vida.
+          </p>
+          <p>
+            Nacimos con la misión de crear un espacio seguro donde la música se
+            convierta en un puente de conexión emocional y social, ayudando a
+            quienes buscan apoyo, compañía e inspiración. Nuestro propósito es
+            que cada persona encuentre en una melodía la fuerza para seguir
+            adelante, la calma para descansar y la compañía que a veces las
+            palabras no logran dar.
+          </p>
+          <p>
+            En Melody of the Heaven trabajamos para fomentar la comunidad a
+            través de la música, promover el bienestar emocional con
+            experiencias musicales que acompañan y motivan, y crear un espacio
+            inclusivo donde todos puedan compartir, expresarse y sentirse parte
+            de algo más grande.
+          </p>
+          <p>
+            Porque sabemos que una canción puede cambiar un día, y una melodía
+            puede cambiar una vida.
+          </p>
+        </div>
+        <div class="Quienes_somos_img">
+          <img src="imagenes/logo.png" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <!--Seccion-Informacion--->
+    <section class="Informacion">
+      <h1>Informacion</h1>
+      <div class="informacion_general">
+        <div class="infotmacion_video">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/9QNZqozcdNg?si=DGRoAbay0MdcTUW3"
+          ></iframe>
+        </div>
+
+        <div class="informacion_texto">
+          <p>
+            La música cumple un papel esencial en la vida, ya que influye
+            directamente en nuestras emociones, pensamientos y comportamientos.
+            A través de sus ritmos y melodías, nos permite expresar sentimientos
+            que muchas veces no podemos poner en palabras, ayudándonos a liberar
+            tensiones, reducir el estrés y mejorar el estado de ánimo. Además,
+            estimula la mente, favoreciendo la concentración, la memoria y la
+            creatividad, siendo también una gran aliada en procesos educativos y
+            terapéuticos.
+          </p>
+          <p>
+            Más allá del ámbito individual, la música tiene un poder social que
+            une a las personas, crea identidad y fomenta la empatía entre
+            culturas. Nos acompaña en diferentes momentos de la vida, marcando
+            recuerdos, motivándonos y brindándonos consuelo en tiempos
+            difíciles. En esencia, la música no solo embellece la existencia,
+            sino que también fortalece el bienestar emocional, mental y social
+            del ser humano.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-----<section class = "Seccion_Formulario">
+      <div class = "formulario">
+        <form>
+          <div>
+
+          </div>
+          -------->
+    <section class="seccion-formulario">
+      <div class="div-cont-formulario">
+        <h> Formulario de Registro </h>
+
+        <p>Complete todas las capas</p>
+
+        <form class="formulario">
+          <!--Input label---->
+
+          <div class="campo">
+            <label for="nombre"> Nombres Completos </label>
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              placeholder="Ingrese sus nombres"
+            />
+          </div>
+          <!----Seleccion---->
+          <div class="campo">
+            <label for="nombre">Pais</label>
+            <select id="pais" name="pais">
+              <option value="">seleccione un pais</option>
+
+              <option value="peru">Perú</option>
+
+              <option value="colombia">Colombia</option>
+
+              <option value="argentina">Argentina</option>
+
+              <option value="mexico">México</option>
+            </select>
+          </div>
+          <!---Checkbox-->
+          <div class="campo">
+            <label>Interes:</label>
+            <ul class="lista_checkbox">
+              <li>
+                <label
+                  ><input
+                    type="checkbox"
+                    name="checkbox"
+                    value="a"
+                  />aaaaa</label
+                >
+              </li>
+              <li>
+                <label
+                  ><input
+                    type="checkbox"
+                    name="checkbox"
+                    value="b"
+                  />bbbbb</label
+                >
+              </li>
+              <li>
+                <label
+                  ><input
+                    type="checkbox"
+                    name="checkbox"
+                    value="c"
+                  />ccccc</label
+                >
+              </li>
+              <li>
+                <label
+                  ><input
+                    type="checkbox"
+                    name="checkbox"
+                    value="d"
+                  />ddddd</label
+                >
+              </li>
+            </ul>
+          </div>
+          <!----Radio-->
+          <div class="campo">
+            <label>Sexo:</label>
+            <ul class="lista_radio">
+              <li>
+                <label
+                  ><input
+                    type="checkbox"
+                    name="sexo"
+                    value="masculino"
+                  />masculino</label
+                >
+              </li>
+              <li>
+                <label
+                  ><input
+                    type="checkbox"
+                    name="sexo"
+                    value="femenino"
+                  />femenino</label
+                >
+              </li>
+            </ul>
+          </div>
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </section>
+    <!-- PIE DE PAGINA -->
+
+    <section id="footer">
+      <footer class="footer">
+        <div class="footer-container">
+          <!-- Logo y nombre de sitio -->
+          <div class="footer-brand">
+            <img src="imagenes/logo.png" alt="Logo" class="footer-logo" />
+            <p>Melody of the Heaven</p>
+            <small>© 2025 Todos los derechos reservados</small>
+          </div>
+
+          <!-- Enlaces legales -->
+          <div class="footer-links">
+            <h4>Legal</h4>
+            <a href="/Documentos/3.politica-privacidad.pdf"
+              >Política de Privacidad</a
+            >
+            <!-- Dentro de href llama a un documento pdf con la poltica-->
+            <a href="#">Términos y Condiciones</a>
+            <!-- Dentro de href llama a un documento pdf con los terminos y condiciones-->
+            <a href="/Documentos/LeyProteccionDatos.pdf">Protección de Datos</a>
+          </div>
+
+          <!-- Redes sociales con íconos personalizados -->
+          <div class="footer-social">
+            <h4>Síguenos</h4>
+            <a href="#"
+              ><img
+                src="https://cdn-icons-png.flaticon.com/512/145/145802.png"
+                alt="Facebook"
+                class="social-icon"
+            /></a>
+            <a href="#"
+              ><img
+                src="https://cdn-icons-png.flaticon.com/512/145/145812.png"
+                alt="Instagram"
+                class="social-icon"
+            /></a>
+            <a href="#"
+              ><img
+                src="https://cdn-icons-png.flaticon.com/512/145/145807.png"
+                alt="LinkedIn"
+                class="social-icon"
+            /></a>
+            <a href="#"
+              ><img
+                src="https://cdn-icons-png.flaticon.com/512/145/145806.png"
+                alt="Twitter"
+                class="social-icon"
+            /></a>
+          </div>
+        </div>
+      </footer>
+    </section>
+  </body>
+</html>
