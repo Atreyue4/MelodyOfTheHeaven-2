@@ -62,11 +62,6 @@ html {
   width: auto;
 }
 
-.logo img:hover {
-  height: 60px;
-  width: auto;
-}
-
 .menu-toggle {
   display: none;
   font-size: 2rem;
