@@ -259,39 +259,18 @@ section {
 }
 
 @media (max-width: 768px) {
+  
   .topheader {
     height: 60px;
     padding: 0 10px;
   }
 
+  /* Botón hamburguesa visible */
   .menu-toggle {
     display: block;
   }
 
-  .menu-horizontal {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    background-color: #20817b;
-    z-index: 999;
-  }
-
-  .menu-horizontal.active {
-    display: flex;
-  }
-
-  .menu-horizontal li {
-    border-bottom: 1px solid #ffff;
-  }
-
-  .menu-horizontal li a {
-    padding: 15px;
-    font-size: 18px;
-  }
-
+  /* Submenú en móviles */
   .menu-vertical {
     display: none;
     position: static;
@@ -309,10 +288,6 @@ section {
 
   .logo img {
     height: 40px;
-  }
-
-  .logo img:hover {
-    height: 45px;
   }
 
   section {

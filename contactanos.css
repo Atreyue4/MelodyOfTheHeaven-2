@@ -94,14 +94,10 @@
 
 /* Tablets (768px - 1024px) */
 @media (max-width: 1024px) {
-  .Quienes_somos_general,
-  .informacion_general,
   .contactanos-general {
     gap: 20px;
   }
 
-  .Quienes_somos_texto p,
-  .informacion_texto p,
   .contactanos-texto p {
     font-size: 16px;
   }
@@ -112,11 +108,6 @@
     font-size: 1.5rem;
   }
 
-  .div-cont-formulario {
-    max-width: 400px;
-    padding: 30px;
-  }
-
   .contactanos-texto,
   .contactanos-form {
     padding: 0.75rem;
@@ -125,17 +116,6 @@
 
 /* Móviles (< 768px) */
 @media (max-width: 768px) {
-  /* Header */
-  .topheader {
-    height: 60px;
-    padding: 0 10px;
-  }
-
-  /* Botón hamburguesa visible */
-  .menu-toggle {
-    display: block;
-  }
-
   /* Menú horizontal oculto por defecto, vertical al activar */
   .menu-horizontal {
     display: none;
@@ -161,84 +141,23 @@
     font-size: 18px;
   }
 
-  /* Submenú en móviles */
-  .menu-vertical {
-    display: none;
-    position: static;
-    width: 100%;
-    background-color: #203531;
-  }
-
-  .menu-vertical.active {
-    display: block;
-  }
-
-  .menu-vertical li a {
-    padding: 10px 30px;
-  }
-
-  /* Logo */
-  .logo img {
-    height: 40px;
-  }
-
-  .logo img:hover {
-    height: 45px;
-  }
-
-  /* Secciones */
-  section {
-    margin-top: 60px;
-  }
-
-  .seccion-Quienes_somos,
-  .Informacion,
   #contactanos {
     padding: 40px 10px;
   }
 
-  .Quienes_somos_general,
-  .informacion_general,
   .contactanos-general {
     flex-direction: column;
     gap: 20px;
   }
 
-  .Quienes_somos_texto p,
-  .informacion_texto p,
   .contactanos-texto p {
     font-size: 16px;
     text-align: left;
   }
 
-  .seccion-Quienes_somos h1,
-  .Informacion h1,
   #contactanos h1 {
     font-size: 1.2rem;
     padding: 10px;
-  }
-
-  .Quienes_somos_img img,
-  .infotmacion_video iframe {
-    max-width: 100%;
-  }
-
-  /* Formulario */
-  .seccion-formulario {
-    padding: 20px;
-  }
-
-  .div-cont-formulario {
-    padding: 20px;
-    max-width: 100%;
-  }
-
-  .campo {
-    padding: 10px;
-  }
-
-  .formulario button {
-    width: 100%;
   }
 
   /* Contactanos en móviles */
