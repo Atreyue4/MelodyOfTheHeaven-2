@@ -1,14 +1,12 @@
-/* Estilos generales */
 body {
   background-color: #1e4745;
-  /* background-image: url("imagenes/estilo-musical.png"); */
-  margin: 0; /* Evita márgenes por defecto */
+  margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif; /* Agregué una fuente básica para consistencia */
+  font-family: Arial, sans-serif;
 }
 
 html {
-  scroll-behavior: smooth; /* Scroll suave para anclas */
+  scroll-behavior: smooth;
 }
 
 .topheader {
@@ -21,7 +19,7 @@ html {
   align-items: center;
   justify-content: space-between;
   padding: 0 20px;
-  z-index: 1000; /* Para que esté encima del contenido */
+  z-index: 1000;
 }
 
 .menu-horizontal {
@@ -30,7 +28,6 @@ html {
   display: flex;
   right: 100;
   top: 0;
-  /*justify-content: center;*/
   width: 100%;
 }
 
@@ -70,7 +67,6 @@ html {
   width: auto;
 }
 
-/* BOTÓN HAMBURGUESA (oculto en desktop) */
 .menu-toggle {
   display: none;
   font-size: 2rem;
@@ -81,12 +77,10 @@ html {
   margin-right: 1rem;
 }
 
-/* Secciones generales */
 section {
-  margin-top: 80px; /* Espacio para el header fijo de 80px en desktop */
+  margin-top: 80px;
 }
 
-/* Sección Quienes somos */
 .seccion-Quienes_somos {
   padding: 60px 20px;
   background-color: #279e96;
@@ -124,7 +118,6 @@ section {
   height: auto;
 }
 
-/* Sección Informacion */
 .Informacion {
   padding: 60px 20px;
   background-color: #279e96;
@@ -162,30 +155,36 @@ section {
   height: auto;
 }
 
-/* Sección Formulario */
 .seccion-formulario {
   background-color: #20817b;
   padding: 40px;
-  /* Quité display: flex; justify-content: center; para que el h1 esté arriba */
 }
 
 .seccion-formulario h1 {
-  color: #ffff; /* Texto blanco para contraste */
+  color: #ffff;
   line-height: 1;
-  text-align: center; /* Centrado horizontal */
+  text-align: center;
   padding: 15px;
-  font-size: 2rem; /* Tamaño grande, ajusta si quieres */
-  margin-bottom: 20px; /* Espacio entre h1 y formulario */
+  font-size: 2rem;
+  margin-bottom: 20px;
 }
 
 .div-cont-formulario {
-  background-color: beige;
+  background-color: #1c716bfd;
   padding: 40px;
-  border: 2px solid blue;
+  border: 2px solid rgba(0, 0, 0, 0.094);
   border-radius: 10px;
   width: 100%;
   max-width: 500px;
-  margin: 0 auto; /* Centrar horizontalmente */
+  margin: 0 auto;
+}
+
+.div-cont-formulario p {
+  color: white;
+}
+
+.formulario {
+  max-width: 100%;
 }
 
 .campo {
@@ -207,8 +206,9 @@ section {
 .formulario select {
   width: 100%;
   padding: 10px;
-  border: 1px solid red;
+  border: 1px solid rgba(0, 0, 0, 0.378);
   box-sizing: border-box;
+  border-radius: 5px;
 }
 
 .lista_checkbox,
@@ -217,66 +217,67 @@ section {
   margin: 0;
   padding: 10px;
   border: 1px solid #ccc;
-  background-color: aqua;
+  background-color: rgba(250, 240, 223, 0.57);
   border-radius: 5px;
 }
 
 .formulario button {
-  background-color: black;
+  padding: 0.75rem 1.5rem;
+  background-color: #1e4745;
   color: white;
-  border: 1.5px solid black;
-  padding: 10px 20px;
-  border-radius: 5px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
   cursor: pointer;
-  display: block;
-  margin: 0 auto;
+  transition: background-color 0.3s;
 }
 
-/* MEDIA QUERIES */
+.formulario button:hover {
+  background-color: #203531;
+}
 
-/* Tablets (768px - 1024px) */
 @media (max-width: 1024px) {
   .Quienes_somos_general,
   .informacion_general {
-    gap: 20px; /* Reduce espacio entre elementos */
+    gap: 20px;
   }
 
   .Quienes_somos_texto p,
   .informacion_texto p {
-    font-size: 16px; /* Texto más pequeño */
+    font-size: 16px;
   }
 
   .seccion-Quienes_somos h1,
   .Informacion h1,
   .seccion-formulario h1 {
-    font-size: 1.5rem; /* Títulos más pequeños */
+    font-size: 1.5rem;
   }
 
   .div-cont-formulario {
-    max-width: 400px; /* Formulario más estrecho */
+    max-width: 400px;
     padding: 30px;
+  }
+
+  .formulario {
+    max-width: 100%;
   }
 }
 
-/* Móviles (< 768px) */
 @media (max-width: 768px) {
-  /* Header */
   .topheader {
-    height: 60px; /* Más bajo en móviles */
+    height: 60px;
     padding: 0 10px;
   }
 
-  /* Botón hamburguesa visible */
   .menu-toggle {
     display: block;
   }
 
-  /* Menú horizontal oculto por defecto, vertical al activar */
   .menu-horizontal {
-    display: none; /* Oculto inicialmente */
+    display: none;
     flex-direction: column;
     position: absolute;
-    top: 60px; /* Debajo del header */
+    top: 60px;
     left: 0;
     width: 100%;
     background-color: #20817b;
@@ -284,11 +285,11 @@ section {
   }
 
   .menu-horizontal.active {
-    display: flex; /* Mostrar al activar clase */
+    display: flex;
   }
 
   .menu-horizontal li {
-    border-bottom: 1px solid #ffff; /* Separadores */
+    border-bottom: 1px solid #ffff;
   }
 
   .menu-horizontal li a {
@@ -296,23 +297,21 @@ section {
     font-size: 18px;
   }
 
-  /* Submenú en móviles */
   .menu-vertical {
-    display: none; /* Oculto por defecto */
-    position: static; /* No absoluto */
+    display: none;
+    position: static;
     width: 100%;
     background-color: #203531;
   }
 
   .menu-vertical.active {
-    display: block; /* Mostrar con clase */
+    display: block;
   }
 
   .menu-vertical li a {
-    padding: 10px 30px; /* Indentado */
+    padding: 10px 30px;
   }
 
-  /* Logo */
   .logo img {
     height: 40px;
   }
@@ -321,26 +320,25 @@ section {
     height: 45px;
   }
 
-  /* Secciones */
   section {
-    margin-top: 60px; /* Ajuste para header de 60px en móviles */
+    margin-top: 60px;
   }
 
   .seccion-Quienes_somos,
   .Informacion {
-    padding: 40px 10px; /* Menos padding */
+    padding: 40px 10px;
   }
 
   .Quienes_somos_general,
   .informacion_general {
-    flex-direction: column; /* Apilar verticalmente */
+    flex-direction: column;
     gap: 20px;
   }
 
   .Quienes_somos_texto p,
   .informacion_texto p {
     font-size: 16px;
-    text-align: left; /* Mejor legibilidad en móviles */
+    text-align: left;
   }
 
   .seccion-Quienes_somos h1,
@@ -348,22 +346,25 @@ section {
   .seccion-formulario h1 {
     font-size: 1.2rem;
     padding: 10px;
-    margin-bottom: 15px; /* Menos espacio en móviles */
+    margin-bottom: 15px;
   }
 
   .Quienes_somos_img img,
   .infotmacion_video iframe {
-    max-width: 100%; /* Ancho completo */
+    max-width: 100%;
   }
 
-  /* Formulario */
   .seccion-formulario {
     padding: 20px;
   }
 
   .div-cont-formulario {
     padding: 20px;
-    max-width: 100%; /* Ancho completo */
+    max-width: 100%;
+  }
+
+  .formulario {
+    max-width: 100%;
   }
 
   .campo {
@@ -371,6 +372,6 @@ section {
   }
 
   .formulario button {
-    width: 100%; /* Botón ancho completo */
+    width: 100%;
   }
 }
