@@ -1,4 +1,4 @@
-/* BOTÓN HAMBURGUESA (ESCONDE EN DESKTOP) */
+/* BOTÓN HAMBURGUESA (oculto en desktop) */
 .menu-toggle {
   display: none; /* Oculto por defecto */
   font-size: 2rem; /* Tamaño del ícono hamburguesa */
@@ -6,30 +6,61 @@
   border: none; /* Sin bordes */
   cursor: pointer; /* Manito al pasar el mouse */
   margin-right: 1rem; /* Espacio entre el borde derecho */
+  color: black;
 }
 
 /* RESPONSIVE: MÓVILES */
 @media (max-width: 768px) {
   .menu-toggle {
     display: block; /* Mostrar botón hamburguesa en móviles */
-    color: black;
   }
 
-  .Menu-Horizontal {
+  .menu-horizontal {
     display: none; /* Ocultar menú horizontal por defecto */
     flex-direction: column; /* Mostrarlo en vertical al activarse */
     width: 100%;
-    background-color: white;
+    background-color: rgb(0, 0, 0);
     position: absolute;
-    top: 5rem; /* Debajo del menú fijo */
+    top: 100%; /* Debajo del nav */
     left: 0;
+    z-index: 10; /* Para que esté encima de otros elementos */
   }
 
-  .Menu-Horizontal.active {
+  .menu-horizontal.active {
     display: flex; /* Mostrar menú al activar la clase */
   }
 
-  .Menu-Horizontal li {
-    border-bottom: 1px solid #ccc; /* Líneas separadoras */
+  .menu-horizontal li {
+    border-bottom: 1px solid #000000; /* Líneas separadoras */
+    width: 100%;
+  }
+
+  .menu-horizontal li a {
+    display: block;
+    padding: 1rem;
+    color: white; /* Para que se vea en fondo negro */
+  }
+
+  /* Submenú en móviles: oculto por defecto, visible solo con clase 'active' */
+  .menu-vertical {
+    display: none; /* Oculto inicialmente */
+    position: static; /* No absoluto en móviles */
+    background-color: transparent;
+    box-shadow: none;
+    padding-left: 1rem; /* Indentación para que se vea como submenú */
+    list-style: none; /* Quitar viñetas */
+  }
+
+  .menu-vertical.active {
+    display: block; /* Mostrar submenú al activar la clase */
+  }
+
+  .menu-vertical li {
+    border-bottom: none; /* Quitar líneas extra */
+  }
+
+  .menu-vertical li a {
+    padding: 0.5rem 1rem; /* Menos padding que el menú principal */
+    color: white;
   }
 }

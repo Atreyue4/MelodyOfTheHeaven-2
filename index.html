@@ -22,19 +22,19 @@
         <!-- Ícono de hamburguesa -->
       </button>
       <ul class="menu-horizontal">
-        <li><a href="">Quienes somos</a></li>
-        <li><a href="">Informacion</a></li>
+        <li><a id="quienes-somos" href="">Quienes somos</a></li>
+        <li><a id="informacion" href="">Informacion</a></li>
         <ul class="menu-vertical">
           <li><a href="">Funcionamiento</a></li>
           <li><a href="">Seguridad</a></li>
         </ul>
-        <li><a href="">Registrar</a></li>
+        <li><a id="registro" href="">Registrar</a></li>
         <li><a href="">Iniciar Sesion</a></li>
-        <li><a href="">Contactanos</a></li>
+        <li><a id="contactanos" href="">Contactanos</a></li>
       </ul>
     </nav>
     <!--Seccion-¿Quienes somos?--->
-    <section class="seccion-Quienes_somos">
+    <section id="quienes-somos" class="seccion-Quienes_somos">
       <h1>¿Quienes somos?</h1>
       <div class="Quienes_somos_general">
         <div class="Quienes_somos_texto">
@@ -70,7 +70,7 @@
     </section>
 
     <!--Seccion-Informacion--->
-    <section class="Informacion">
+    <section id="informacion" class="Informacion">
       <h1>Informacion</h1>
       <div class="informacion_general">
         <div class="infotmacion_video">
@@ -111,7 +111,7 @@
 
           </div>
           -------->
-    <section class="seccion-formulario">
+    <section id="registro" class="seccion-formulario">
       <div class="div-cont-formulario">
         <h> Formulario de Registro </h>
 
@@ -214,6 +214,57 @@
         </form>
       </div>
     </section>
+
+    <!-- Nueva sección: Contactanos -->
+    <section id="contactanos">
+      <h1>Contactanos</h1>
+      <div class="contactanos-general">
+        <div class="contactanos-texto">
+          <p>
+            ¿Tienes preguntas o quieres saber más sobre Melody of the Heaven?
+            ¡Estamos aquí para ayudarte! Ponte en contacto con nosotros a través
+            de nuestros canales oficiales.
+          </p>
+          <p>
+            Correo electrónico: info@melodyoftheheaven.com<br />
+            Teléfono: +1 (123) 456-7890<br />
+            Dirección: Calle de la Música, Ciudad Musical, País
+          </p>
+        </div>
+        <div class="contactanos-form">
+          <form>
+            <div class="campo">
+              <label for="contact-nombre">Nombre</label>
+              <input
+                type="text"
+                id="contact-nombre"
+                name="nombre"
+                placeholder="Tu nombre"
+              />
+            </div>
+            <div class="campo">
+              <label for="contact-email">Correo Electrónico</label>
+              <input
+                type="email"
+                id="contact-email"
+                name="email"
+                placeholder="Tu email"
+              />
+            </div>
+            <div class="campo">
+              <label for="contact-mensaje">Mensaje</label>
+              <textarea
+                id="contact-mensaje"
+                name="mensaje"
+                placeholder="Escribe tu mensaje"
+              ></textarea>
+            </div>
+            <button type="submit">Enviar Mensaje</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
     <!-- PIE DE PAGINA -->
 
     <section id="footer">

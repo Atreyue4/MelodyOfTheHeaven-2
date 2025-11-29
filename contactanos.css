@@ -1,0 +1,108 @@
+/* Estilos para la sección Contactanos */
+#contactanos {
+  padding: 2rem 1rem; /* Espaciado interno */
+  background-color: #f9f9f9; /* Fondo suave, ajusta según tu diseño */
+  text-align: center; /* Centrar el título */
+}
+
+#contactanos h1 {
+  font-size: 2rem; /* Tamaño del título */
+  margin-bottom: 1rem;
+  color: #333; /* Color del texto */
+}
+
+.contactanos-general {
+  display: flex; /* Layout en fila para desktop */
+  justify-content: space-between; /* Espacio entre texto y form */
+  align-items: flex-start; /* Alinear al inicio */
+  max-width: 1200px; /* Ancho máximo */
+  margin: 0 auto; /* Centrar */
+  gap: 2rem; /* Espacio entre elementos */
+}
+
+.contactanos-texto {
+  flex: 1; /* Ocupa espacio disponible */
+  padding: 1rem;
+  background-color: #fff; /* Fondo blanco para contraste */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+.contactanos-texto p {
+  font-size: 1rem;
+  line-height: 1.6; /* Espaciado de líneas */
+  color: #555;
+  margin: 0 0 1rem 0;
+}
+
+.contactanos-form {
+  flex: 1; /* Ocupa espacio disponible */
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.contactanos-form form {
+  display: flex;
+  flex-direction: column; /* Campos en columna */
+  gap: 1rem; /* Espacio entre campos */
+}
+
+.contactanos-form .campo {
+  display: flex;
+  flex-direction: column; /* Label arriba, input abajo */
+}
+
+.contactanos-form label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.contactanos-form input,
+.contactanos-form textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  width: 100%; /* Ancho completo */
+  box-sizing: border-box; /* Incluir padding en ancho */
+}
+
+.contactanos-form textarea {
+  resize: vertical; /* Permitir redimensionar verticalmente */
+  min-height: 100px; /* Altura mínima */
+}
+
+.contactanos-form button {
+  padding: 0.75rem 1.5rem;
+  background-color: #007bff; /* Color azul, ajusta */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Transición suave */
+}
+
+.contactanos-form button:hover {
+  background-color: #0056b3; /* Color más oscuro al hover */
+}
+
+/* RESPONSIVE: MÓVILES */
+@media (max-width: 768px) {
+  .contactanos-general {
+    flex-direction: column; /* Apilar en columna en móviles */
+    gap: 1rem; /* Menos espacio */
+  }
+
+  .contactanos-texto,
+  .contactanos-form {
+    padding: 1rem; /* Menos padding en móviles */
+  }
+
+  #contactanos h1 {
+    font-size: 1.5rem; /* Título más pequeño en móviles */
+  }
+}
