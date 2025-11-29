@@ -13,6 +13,7 @@ html {
 
 .topheader {
   position: fixed;
+  top: 0;
   background-color: #20817b;
   width: 100%;
   height: 80px;
@@ -20,7 +21,9 @@ html {
   align-items: center;
   justify-content: space-between;
   padding: 0 20px;
+  z-index: 1000; /* Para que esté encima del contenido */
 }
+
 .menu-horizontal {
   text-decoration: none;
   list-style: none;
@@ -30,6 +33,7 @@ html {
   /*justify-content: center;*/
   width: 100%;
 }
+
 .menu-horizontal li a {
   text-decoration: none;
   color: #ffff;
@@ -37,10 +41,12 @@ html {
   display: block;
   padding: 15px 20px;
 }
+
 .menu-horizontal li a:hover {
   color: #ffff;
   font-size: 20px;
 }
+
 .menu-vertical {
   padding: 0;
   position: absolute;
@@ -49,21 +55,35 @@ html {
   width: 15px;
   background-color: #203531;
 }
+
 .munu-horizontal li:hover .menu-vertical {
   display: block;
 }
+
 .logo img {
   height: 50px;
   width: auto;
 }
+
 .logo img:hover {
   height: 60px;
   width: auto;
 }
 
+/* BOTÓN HAMBURGUESA (oculto en desktop) */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #ffff;
+  margin-right: 1rem;
+}
+
 /* Secciones generales */
 section {
-  margin-top: 80px; /* Espacio para el header fijo */
+  margin-top: 80px; /* Espacio para el header fijo de 80px en desktop */
 }
 
 /* Sección Quienes somos */
@@ -146,9 +166,16 @@ section {
 .seccion-formulario {
   background-color: #20817b;
   padding: 40px;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 40px;
+  /* Quité display: flex; justify-content: center; para que el h1 esté arriba */
+}
+
+.seccion-formulario h1 {
+  color: #ffff; /* Texto blanco para contraste */
+  line-height: 1;
+  text-align: center; /* Centrado horizontal */
+  padding: 15px;
+  font-size: 2rem; /* Tamaño grande, ajusta si quieres */
+  margin-bottom: 20px; /* Espacio entre h1 y formulario */
 }
 
 .div-cont-formulario {
@@ -158,6 +185,7 @@ section {
   border-radius: 10px;
   width: 100%;
   max-width: 500px;
+  margin: 0 auto; /* Centrar horizontalmente */
 }
 
 .campo {
@@ -219,7 +247,8 @@ section {
   }
 
   .seccion-Quienes_somos h1,
-  .Informacion h1 {
+  .Informacion h1,
+  .seccion-formulario h1 {
     font-size: 1.5rem; /* Títulos más pequeños */
   }
 
@@ -294,7 +323,7 @@ section {
 
   /* Secciones */
   section {
-    margin-top: 60px; /* Ajuste para header más bajo */
+    margin-top: 60px; /* Ajuste para header de 60px en móviles */
   }
 
   .seccion-Quienes_somos,
@@ -315,9 +344,11 @@ section {
   }
 
   .seccion-Quienes_somos h1,
-  .Informacion h1 {
+  .Informacion h1,
+  .seccion-formulario h1 {
     font-size: 1.2rem;
     padding: 10px;
+    margin-bottom: 15px; /* Menos espacio en móviles */
   }
 
   .Quienes_somos_img img,

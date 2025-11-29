@@ -57,7 +57,7 @@
 .contactanos-form label {
   font-weight: bold;
   margin-bottom: 0.5rem;
-  color: #ffff; /* Texto blanco */
+  color: #000000; /* Texto blanco */
 }
 
 .contactanos-form input,
