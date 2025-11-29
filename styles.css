@@ -1,10 +1,21 @@
+/* Estilos generales */
 body {
   background-color: #1e4745;
-  /* background-image: url("imagenes/estilo-musical.png");*/
+  /* background-image: url("imagenes/estilo-musical.png"); */
+  margin: 0; /* Evita márgenes por defecto */
+  padding: 0;
+  font-family: Arial, sans-serif; /* Agregué una fuente básica para consistencia */
+}
+
+html {
+  scroll-behavior: smooth; /* Scroll suave para anclas */
 }
 
 h1 {
+  /* Puedes agregar estilos globales aquí si quieres */
 }
+
+/* Header fijo */
 .topheader {
   position: fixed;
   background-color: #20817b;
@@ -14,144 +25,199 @@ h1 {
   align-items: center;
   justify-content: space-between;
   padding: 0 20px;
+  z-index: 1000; /* Para que esté encima de otros elementos */
 }
+
+/* Menú horizontal (desktop) */
 .menu-horizontal {
   text-decoration: none;
   list-style: none;
   display: flex;
-  right: 100;
-  top: 0;
-  /*justify-content: center;*/
-  width: 100%;
+  margin: 0;
+  padding: 0;
 }
+
+.menu-horizontal li {
+  position: relative; /* Para el submenú */
+}
+
 .menu-horizontal li a {
   text-decoration: none;
   color: #ffff;
-  list-style: none;
   display: block;
   padding: 15px 20px;
+  transition: font-size 0.3s; /* Transición suave para hover */
 }
+
 .menu-horizontal li a:hover {
   color: #ffff;
   font-size: 20px;
 }
+
+/* Submenú vertical (desktop) */
 .menu-vertical {
   padding: 0;
   position: absolute;
   display: none;
   list-style: none;
-  width: 15px;
+  width: 200px; /* Ancho fijo para el submenú */
   background-color: #203531;
+  top: 100%; /* Debajo del li padre */
+  left: 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
-.munu-horizontal li:hover .menu-vertical {
+
+.menu-horizontal li:hover .menu-vertical {
   display: block;
 }
+
+.menu-vertical li a {
+  padding: 10px 20px;
+  color: #ffff;
+  display: block;
+}
+
+.menu-vertical li a:hover {
+  background-color: #279e96;
+}
+
+/* Logo */
 .logo img {
   height: 50px;
   width: auto;
+  transition: height 0.3s; /* Transición suave */
 }
+
 .logo img:hover {
   height: 60px;
   width: auto;
 }
-/*section{
-margin: 100px auto;
-border-radius: 10;
-}*/
-/*Seccion Quienes somos*/
+
+/* BOTÓN HAMBURGUESA (oculto en desktop) */
+.menu-toggle {
+  display: none; /* Oculto por defecto */
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #ffff;
+  margin-right: 1rem;
+}
+
+/* Secciones generales */
+section {
+  margin-top: 80px; /* Espacio para el header fijo */
+}
+
+/* Sección Quienes somos */
 .seccion-Quienes_somos {
   padding: 60px 20px;
-  background-color: #279E96;
+  background-color: #279e96;
 }
+
 .Quienes_somos_general {
   display: flex;
-  justify-content: space-arowt;
+  justify-content: space-around;
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
   gap: 40px;
 }
+
 .Quienes_somos_texto {
   flex: 1;
 }
+
 .Quienes_somos_texto p {
-  text align: justity;
+  text-align: justify;
   color: #ffff;
   font-size: 18px;
 }
+
 .seccion-Quienes_somos h1 {
   color: #ffff;
   line-height: 1;
   text-align: center;
   padding: 15px;
 }
-.Quienes_somos_img {
-  width: 1200px;
+
+.Quienes_somos_img img {
+  width: 100%;
   max-width: 500px;
+  height: auto;
 }
 
-/*Seccion Informacion*/
-.Informacion{
+/* Sección Informacion */
+.Informacion {
   padding: 60px 20px;
-  background-color: #279E96;
+  background-color: #279e96;
 }
+
 .informacion_general {
   display: flex;
-  justify-content: space-arowt;
+  justify-content: space-around;
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
   gap: 40px;
 }
-.informacion_texto {  
+
+.informacion_texto {
   flex: 1;
 }
+
 .informacion_texto p {
-  text align: justity;
+  text-align: justify;
   color: #ffff;
   font-size: 18px;
 }
+
 .Informacion h1 {
   color: #ffff;
   line-height: 1;
   text-align: center;
   padding: 15px;
 }
-.infotmacion_video iframe{
-  width: 1200px;
+
+.infotmacion_video iframe {
+  width: 100%;
   max-width: 500px;
+  height: auto;
 }
-/*Seccion-Formulario*/
-.seccion-formulario{
+
+/* Sección Formulario */
+.seccion-formulario {
   background-color: #20817b;
   padding: 40px;
-  border:3px;
   display: flex;
-justify-content: center;
-margin-bottom: 40px;
+  justify-content: center;
+  margin-bottom: 40px;
 }
-.div-cont-formulario{
-background-color: beige;
-padding: 40px;
-border: 2px solid blue;
-border-radius: 10px;
-width: 100%;
-max-width: 500px;
+
+.div-cont-formulario {
+  background-color: beige;
+  padding: 40px;
+  border: 2px solid blue;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 500px;
 }
+
 .campo {
   background-color: aliceblue;
   padding: 15px;
-  border: 1px;
+  border: 1px solid #ccc;
   border-radius: 8px;
   margin-bottom: 15px;
 }
-.formulario label{
+
+.formulario label {
   display: block;
   font-weight: 600;
   margin-bottom: 8px;
   color: black;
 }
-/*inputs/Label*/
+
 .formulario input[type="text"],
 .formulario select {
   width: 100%;
@@ -159,20 +225,164 @@ max-width: 500px;
   border: 1px solid red;
   box-sizing: border-box;
 }
+
 .lista_checkbox,
-.lista_radio{
+.lista_radio {
   list-style: none;
   margin: 0;
-  border: 1px;
+  padding: 10px;
+  border: 1px solid #ccc;
   background-color: aqua;
   border-radius: 5px;
 }
-.formulario button{
+
+.formulario button {
   background-color: black;
   color: white;
   border: 1.5px solid black;
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
-  justify-content: center;
+  display: block;
+  margin: 0 auto;
+}
+
+/* MEDIA QUERIES */
+
+/* Tablets (768px - 1024px) */
+@media (max-width: 1024px) {
+  .Quienes_somos_general,
+  .informacion_general {
+    gap: 20px; /* Reduce espacio entre elementos */
+  }
+
+  .Quienes_somos_texto p,
+  .informacion_texto p {
+    font-size: 16px; /* Texto más pequeño */
+  }
+
+  .seccion-Quienes_somos h1,
+  .Informacion h1 {
+    font-size: 1.5rem; /* Títulos más pequeños */
+  }
+
+  .div-cont-formulario {
+    max-width: 400px; /* Formulario más estrecho */
+    padding: 30px;
+  }
+}
+
+/* Móviles (< 768px) */
+@media (max-width: 768px) {
+  /* Header */
+  .topheader {
+    height: 60px; /* Más bajo en móviles */
+    padding: 0 10px;
+  }
+
+  /* Botón hamburguesa visible */
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Menú horizontal oculto por defecto, vertical al activar */
+  .menu-horizontal {
+    display: none; /* Oculto inicialmente */
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Debajo del header */
+    left: 0;
+    width: 100%;
+    background-color: #20817b;
+    z-index: 999;
+  }
+
+  .menu-horizontal.active {
+    display: flex; /* Mostrar al activar clase */
+  }
+
+  .menu-horizontal li {
+    border-bottom: 1px solid #ffff; /* Separadores */
+  }
+
+  .menu-horizontal li a {
+    padding: 15px;
+    font-size: 18px;
+  }
+
+  /* Submenú en móviles */
+  .menu-vertical {
+    display: none; /* Oculto por defecto */
+    position: static; /* No absoluto */
+    width: 100%;
+    background-color: #203531;
+  }
+
+  .menu-vertical.active {
+    display: block; /* Mostrar con clase */
+  }
+
+  .menu-vertical li a {
+    padding: 10px 30px; /* Indentado */
+  }
+
+  /* Logo */
+  .logo img {
+    height: 40px;
+  }
+
+  .logo img:hover {
+    height: 45px;
+  }
+
+  /* Secciones */
+  section {
+    margin-top: 60px; /* Ajuste para header más bajo */
+  }
+
+  .seccion-Quienes_somos,
+  .Informacion {
+    padding: 40px 10px; /* Menos padding */
+  }
+
+  .Quienes_somos_general,
+  .informacion_general {
+    flex-direction: column; /* Apilar verticalmente */
+    gap: 20px;
+  }
+
+  .Quienes_somos_texto p,
+  .informacion_texto p {
+    font-size: 16px;
+    text-align: left; /* Mejor legibilidad en móviles */
+  }
+
+  .seccion-Quienes_somos h1,
+  .Informacion h1 {
+    font-size: 1.2rem;
+    padding: 10px;
+  }
+
+  .Quienes_somos_img img,
+  .infotmacion_video iframe {
+    max-width: 100%; /* Ancho completo */
+  }
+
+  /* Formulario */
+  .seccion-formulario {
+    padding: 20px;
+  }
+
+  .div-cont-formulario {
+    padding: 20px;
+    max-width: 100%; /* Ancho completo */
+  }
+
+  .campo {
+    padding: 10px;
+  }
+
+  .formulario button {
+    width: 100%; /* Botón ancho completo */
+  }
 }
