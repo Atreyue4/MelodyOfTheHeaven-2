@@ -11,11 +11,6 @@ html {
   scroll-behavior: smooth; /* Scroll suave para anclas */
 }
 
-h1 {
-  /* Puedes agregar estilos globales aquí si quieres */
-}
-
-/* Header fijo */
 .topheader {
   position: fixed;
   background-color: #20817b;
@@ -25,83 +20,45 @@ h1 {
   align-items: center;
   justify-content: space-between;
   padding: 0 20px;
-  z-index: 1000; /* Para que esté encima de otros elementos */
 }
-
-/* Menú horizontal (desktop) */
 .menu-horizontal {
   text-decoration: none;
   list-style: none;
   display: flex;
-  margin: 0;
-  padding: 0;
+  right: 100;
+  top: 0;
+  /*justify-content: center;*/
+  width: 100%;
 }
-
-.menu-horizontal li {
-  position: relative; /* Para el submenú */
-}
-
 .menu-horizontal li a {
   text-decoration: none;
   color: #ffff;
+  list-style: none;
   display: block;
   padding: 15px 20px;
-  transition: font-size 0.3s; /* Transición suave para hover */
 }
-
 .menu-horizontal li a:hover {
   color: #ffff;
   font-size: 20px;
 }
-
-/* Submenú vertical (desktop) */
 .menu-vertical {
   padding: 0;
   position: absolute;
   display: none;
   list-style: none;
-  width: 200px; /* Ancho fijo para el submenú */
+  width: 15px;
   background-color: #203531;
-  top: 100%; /* Debajo del li padre */
-  left: 0;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
-
-.menu-horizontal li:hover .menu-vertical {
+.munu-horizontal li:hover .menu-vertical {
   display: block;
 }
-
-.menu-vertical li a {
-  padding: 10px 20px;
-  color: #ffff;
-  display: block;
-}
-
-.menu-vertical li a:hover {
-  background-color: #279e96;
-}
-
-/* Logo */
 .logo img {
   height: 50px;
   width: auto;
-  transition: height 0.3s; /* Transición suave */
 }
-
 .logo img:hover {
   height: 60px;
   width: auto;
-}
-
-/* BOTÓN HAMBURGUESA (oculto en desktop) */
-.menu-toggle {
-  display: none; /* Oculto por defecto */
-  font-size: 2rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: #ffff;
-  margin-right: 1rem;
 }
 
 /* Secciones generales */
